@@ -10,8 +10,19 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.3",
+    "@types/luxon": "^3.7.1",
+    "@primevue/auto-import-resolver": "^4.5.4",
     "nuxt": "^3.8.2",
+    "unplugin-vue-components": "^31.0.0",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@primeuix/themes": "^2.0.3",
+    "@primevue/nuxt-module": "^4.5.4",
+    "@tailwindcss/vite": "^4.2.1",
+    "luxon": "^3.7.2",
+    "primevue": "^4.5.4",
+    "tailwindcss": "^4.2.1"
   }
 }
