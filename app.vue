@@ -41,11 +41,20 @@
                 </template>
             </Card>
         </div>
+
+        <Transition name="fade" mode="out-in">
+            <p
+                :key="currentPhrase"
+                class="mt-10 text-sm sm:text-base text-gray-500 italic text-center px-6 max-w-md"
+            >
+                {{ currentPhrase }}
+            </p>
+        </Transition>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { DateTime, Interval } from "luxon";
 
 const TARGET = DateTime.local(2026, 7, 1, 0, 0, 0);
@@ -54,14 +63,13 @@ const days = ref(0);
 const hours = ref(0);
 const minutes = ref(0);
 const seconds = ref(0);
-let interval: ReturnType<typeof setInterval> | null = null;
 
 const updateCountdown = () => {
     const now = DateTime.now();
 
     if (now >= TARGET) {
         days.value = hours.value = minutes.value = seconds.value = 0;
-        if (interval) clearInterval(interval);
+        clearInterval(countdownInterval);
         return;
     }
 
@@ -78,14 +86,46 @@ const updateCountdown = () => {
     seconds.value = Math.floor(diff.seconds);
 };
 
+let countdownInterval: ReturnType<typeof setInterval>;
+let phrasesInterval: ReturnType<typeof setInterval>;
+
+const phrases = [
+    "Affûtage des shinai en cours...",
+    "Les arbitres révisent les règlements...",
+    "Les shiaijos sont en cours d'installation...",
+    "Saint-Nectaire en cours d'affinage...",
+    "Les inscriptions sont en cours de traitement...",
+    "Les plannings de poules sont en préparation...",
+    "Les sensei préparent les derniers entraînements...",
+    "Les trophées attendent leurs futurs champions...",
+];
+
+const currentPhraseIndex = ref(0);
+const currentPhrase = ref(phrases[0]);
+
 onMounted(() => {
     updateCountdown();
-    interval = setInterval(updateCountdown, 1000);
+    countdownInterval = setInterval(updateCountdown, 1000);
+    phrasesInterval = setInterval(() => {
+        currentPhraseIndex.value =
+            (currentPhraseIndex.value + 1) % phrases.length;
+        currentPhrase.value = phrases[currentPhraseIndex.value];
+    }, 4000);
 });
 
 onBeforeUnmount(() => {
-    if (interval) clearInterval(interval);
+    clearInterval(countdownInterval);
+    clearInterval(phrasesInterval);
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.6s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>
