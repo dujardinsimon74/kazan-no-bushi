@@ -2,32 +2,44 @@
     <div
         class="flex flex-col items-center justify-center min-h-screen text-gray-800"
     >
-        <h1 class="text-5xl font-bold mb-6">Kazan No Bushi 2026</h1>
-        <div class="flex space-x-4 text-4xl font-mono">
-            <div
-                class="bg-gray-100 w-32 h-32 rounded-lg shadow-lg flex flex-col items-center justify-center"
-            >
-                <span>{{ days }}</span>
-                <p class="text-sm">Jours</p>
-            </div>
-            <div
-                class="bg-gray-100 w-32 h-32 rounded-lg shadow-lg flex flex-col items-center justify-center"
-            >
-                <span>{{ hours }}</span>
-                <p class="text-sm">Heures</p>
-            </div>
-            <div
-                class="bg-gray-100 w-32 h-32 rounded-lg shadow-lg flex flex-col items-center justify-center"
-            >
-                <span>{{ minutes }}</span>
-                <p class="text-sm">Minutes</p>
-            </div>
-            <div
-                class="bg-gray-100 w-32 h-32 rounded-lg shadow-lg flex flex-col items-center justify-center"
-            >
-                <span>{{ seconds }}</span>
-                <p class="text-sm">Secondes</p>
-            </div>
+        <h1 class="text-2xl sm:text-6xl font-bold mb-6 text-center w-full px-4">
+            Kazan No Bushi 2026
+        </h1>
+        <div
+            class="flex flex-wrap justify-center gap-4 px-4 text-2xl sm:text-3xl md:text-4xl font-mono text-center"
+        >
+            <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+                <template #title>
+                    <span class="text-2xl sm:text-4xl">{{ days }}</span>
+                </template>
+                <template #content>
+                    <p class="text-xs sm:text-sm">Jours</p>
+                </template>
+            </Card>
+            <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+                <template #title>
+                    <span class="text-2xl sm:text-4xl">{{ hours }}</span>
+                </template>
+                <template #content>
+                    <p class="text-xs sm:text-sm">Heures</p>
+                </template>
+            </Card>
+            <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+                <template #title>
+                    <span class="text-2xl sm:text-4xl">{{ minutes }}</span>
+                </template>
+                <template #content>
+                    <p class="text-xs sm:text-sm">Minutes</p>
+                </template>
+            </Card>
+            <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+                <template #title>
+                    <span class="text-2xl sm:text-4xl">{{ seconds }}</span>
+                </template>
+                <template #content>
+                    <p class="text-xs sm:text-sm">Secondes</p>
+                </template>
+            </Card>
         </div>
     </div>
 </template>
