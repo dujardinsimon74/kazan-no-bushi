@@ -48,4 +48,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  app: {
+    head: {
+      title: "Kazan No Bushi", // default fallback title
+      htmlAttrs: {
+        lang: "fr",
+      },
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
 });

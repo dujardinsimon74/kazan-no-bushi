@@ -21,6 +21,7 @@
     "@primeuix/themes": "^2.0.3",
     "@primevue/nuxt-module": "^4.5.4",
     "@tailwindcss/vite": "^4.2.1",
+    "gsap": "^3.14.2",
     "luxon": "^3.7.2",
     "primevue": "^4.5.4",
     "tailwindcss": "^4.2.1"
