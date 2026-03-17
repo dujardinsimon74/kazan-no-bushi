@@ -33,11 +33,12 @@ const categories = [
         >
             Compétitions ouvertes à tous les niveaux
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="flex flex-wrap justify-center gap-6">
             <Card
                 v-for="(cat, index) in categories"
                 :key="cat.name"
                 :data-lag="0.1 + index * 0.05"
+                class="w-full sm:w-72"
             >
                 <template #title>
                     <div class="flex items-center gap-3">

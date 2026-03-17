@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const cardPt = {
+    root: { class: "!bg-white/10 backdrop-blur-sm !border-white/20" },
+    body: { class: "text-white" },
+};
+
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { DateTime, Interval } from "luxon";
 
@@ -46,7 +51,7 @@ onBeforeUnmount(() => {
     <div
         class="flex flex-wrap justify-center gap-4 px-4 text-2xl sm:text-3xl md:text-4xl font-mono text-center"
     >
-        <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+        <Card class="w-28 sm:w-32 md:w-36 lg:w-40" :pt="cardPt">
             <template #title>
                 <span class="text-2xl sm:text-4xl">{{ days }}</span>
             </template>
@@ -54,7 +59,7 @@ onBeforeUnmount(() => {
                 <p class="text-xs sm:text-sm">Jours</p>
             </template>
         </Card>
-        <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+        <Card class="w-28 sm:w-32 md:w-36 lg:w-40" :pt="cardPt">
             <template #title>
                 <span class="text-2xl sm:text-4xl">{{ hours }}</span>
             </template>
@@ -62,7 +67,7 @@ onBeforeUnmount(() => {
                 <p class="text-xs sm:text-sm">Heures</p>
             </template>
         </Card>
-        <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+        <Card class="w-28 sm:w-32 md:w-36 lg:w-40" :pt="cardPt">
             <template #title>
                 <span class="text-2xl sm:text-4xl">{{ minutes }}</span>
             </template>
@@ -70,7 +75,7 @@ onBeforeUnmount(() => {
                 <p class="text-xs sm:text-sm">Minutes</p>
             </template>
         </Card>
-        <Card class="w-28 sm:w-32 md:w-36 lg:w-40">
+        <Card class="w-28 sm:w-32 md:w-36 lg:w-40" :pt="cardPt">
             <template #title>
                 <span class="text-2xl sm:text-4xl">{{ seconds }}</span>
             </template>

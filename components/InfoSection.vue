@@ -45,6 +45,8 @@
             <div class="border-t border-gray-100" />
         </div>
 
+        <Registration />
+
         <!-- Footer note -->
         <p class="text-center text-xs text-gray-300 mt-16">
             © Kazan No Bushi 2026 · Tous droits réservés

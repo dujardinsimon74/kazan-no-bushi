@@ -33,26 +33,46 @@ onBeforeUnmount(() => {
 <template>
     <section
         id="hero"
-        class="relative flex flex-col items-center justify-center h-screen text-gray-800 overflow-hidden"
+        class="relative flex flex-col items-center justify-center h-screen overflow-hidden"
     >
-        <h1 class="text-2xl sm:text-6xl font-bold mb-6 text-center w-full px-4">
-            Kazan No Bushi 2026
-        </h1>
+        <!-- Background image -->
+        <img
+            src="/kendo2.jpg"
+            alt="Combat de kendo"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+        />
 
-        <CountDown />
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/60" />
 
-        <Transition name="fade" mode="out-in">
-            <p
-                :key="currentPhrase"
-                class="mt-10 text-sm sm:text-base text-gray-500 italic text-center px-6 max-w-md"
+        <!-- Content -->
+        <div class="relative z-10 flex flex-col items-center">
+            <img
+                src="/logo-asm.png"
+                alt="Logo ASM"
+                class="w-24 h-24 sm:w-32 sm:h-32 mb-6 drop-shadow-xl rounded-full"
+            />
+            <h1
+                class="text-3xl sm:text-6xl font-bold mb-6 text-center w-full px-4 text-white drop-shadow-lg tracking-wide"
             >
-                {{ currentPhrase }}
-            </p>
-        </Transition>
+                Kazan No Bushi 2026
+            </h1>
+
+            <CountDown />
+
+            <Transition name="fade" mode="out-in">
+                <p
+                    :key="currentPhrase"
+                    class="mt-10 text-sm sm:text-base text-white/70 italic text-center px-6 max-w-md"
+                >
+                    {{ currentPhrase }}
+                </p>
+            </Transition>
+        </div>
 
         <!-- Scroll hint -->
         <div
-            class="absolute bottom-10 flex flex-col items-center gap-2 text-gray-400 animate-bounce"
+            class="absolute bottom-10 flex flex-col items-center gap-2 text-white/60 animate-bounce z-10"
         >
             <span class="text-xs tracking-widest uppercase">Découvrir</span>
             <svg
