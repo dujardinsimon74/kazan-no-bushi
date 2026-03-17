@@ -7,7 +7,7 @@ const cardPt = {
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { DateTime, Interval } from "luxon";
 
-const TARGET = DateTime.local(2026, 11, 28, 10, 0, 0);
+const TARGET = DateTime.local(2026, 7, 1, 20, 0, 0);
 const days = ref(0);
 const hours = ref(0);
 const minutes = ref(0);
@@ -84,4 +84,5 @@ onBeforeUnmount(() => {
             </template>
         </Card>
     </div>
+    <span class="text-3xl text-slate-300">Avant l'annonce des dates</span>
 </template>

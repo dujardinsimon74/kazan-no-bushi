@@ -24,25 +24,25 @@ const days: Day[] = [
                 time: "9h30",
                 label: "Accueil & vérification des inscriptions",
                 detail: null,
+                highlight: true,
             },
             {
                 time: "11h – 13h",
                 label: "Kihon",
                 detail: null,
-                highlight: true,
             },
             { time: "13h – 13h30", label: "Pause repas", detail: null },
             {
                 time: "13h30 – 15h",
                 label: "Kihon",
                 detail: null,
-                highlight: true,
             },
             { time: "15h – 16h", label: "Ji-geiko", detail: null },
             {
                 time: "16h30",
                 label: "Passage de grades",
                 detail: "1er à 3ème dan",
+                highlight: true,
             },
         ],
     },
@@ -58,7 +58,12 @@ const days: Day[] = [
                 label: "Ouverture des portes",
                 detail: "Contrôle des passeports et des shinaïs pour tous les compétiteurs",
             },
-            { time: "9h30", label: "Début des compétitions", detail: null },
+            {
+                time: "9h30",
+                label: "Début des compétitions",
+                detail: null,
+                highlight: true,
+            },
         ],
     },
 ];
@@ -67,13 +72,13 @@ const days: Day[] = [
 <template>
     <div class="max-w-2xl mx-auto mb-24">
         <h2
-            class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
+            class="text-3xl sm:text-4xl font-bold text-center mb-4 text-slate-100"
             data-lag="0.1"
         >
             Programme
         </h2>
         <p
-            class="text-center text-gray-400 mb-12 text-sm uppercase tracking-widest"
+            class="text-center text-slate-200 mb-12 text-sm uppercase tracking-widest"
             data-lag="0.15"
         >
             Déroulement du week-end
@@ -87,29 +92,31 @@ const days: Day[] = [
         >
             <!-- Day separator -->
             <div class="flex items-center gap-3 mb-6">
-                <div class="h-px flex-1 bg-gray-100" />
+                <div class="h-px flex-1 bg-slate-400" />
                 <span
-                    class="text-xs font-semibold uppercase tracking-widest text-indigo-400"
+                    class="text-2xl font-semibold uppercase tracking-widest text-slate-200"
                 >
                     {{ day.label }}
                 </span>
-                <div class="h-px flex-1 bg-gray-100" />
+                <div class="h-px flex-1 bg-slate-400" />
             </div>
 
             <!-- Optional info note -->
             <div
                 v-if="day.note"
-                class="mb-8 rounded-xl border border-indigo-100 bg-indigo-50/60 px-5 py-4 text-sm text-indigo-700"
+                class="mb-8 rounded-xl border border-indigo-800 bg-indigo-900/40 px-5 py-4 text-sm text-slate-200"
                 data-lag="0.12"
             >
-                <p class="font-semibold mb-2">{{ day.note.title }}</p>
-                <ul class="space-y-1 text-indigo-600 text-xs">
+                <p class="font-semibold mb-2 text-slate-200">
+                    {{ day.note.title }}
+                </p>
+                <ul class="space-y-1 text-slate-200">
                     <li
                         v-for="item in day.note.items"
                         :key="item"
                         class="flex items-start gap-2"
                     >
-                        <span class="mt-0.5 text-indigo-300">›</span>
+                        <span class="mt-0.5 text-slate-200">›</span>
                         <span>{{ item }}</span>
                     </li>
                 </ul>
@@ -140,7 +147,7 @@ const days: Day[] = [
                         <!-- Connector -->
                         <div
                             v-if="index < day.events.length - 1"
-                            class="w-px flex-1 bg-gray-200 my-0.5 self-center"
+                            class="w-px flex-1 bg-slate-400 my-0.5 self-center"
                         />
                     </div>
 
@@ -150,15 +157,15 @@ const days: Day[] = [
                             class="font-semibold text-sm leading-snug"
                             :class="
                                 event.highlight
-                                    ? 'text-indigo-700'
-                                    : 'text-gray-700'
+                                    ? 'text-slate-100'
+                                    : 'text-slate-300'
                             "
                         >
                             {{ event.label }}
                         </p>
                         <p
                             v-if="event.detail"
-                            class="text-xs text-gray-400 mt-1"
+                            class="text-xs text-slate-300 mt-1"
                         >
                             {{ event.detail }}
                         </p>
