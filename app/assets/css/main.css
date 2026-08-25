@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+    --font-brush: "Yomogi", cursive;
+    --font-zen: "Zen Kaku Gothic New", system-ui, sans-serif;
+
+    --color-plan-navy-900: #141f45;
+    --color-plan-navy-700: #1b2a5b;
+    --color-plan-cream-100: #f8f1e3;
+    --color-plan-cream-200: #f6eddf;
+    --color-plan-cream-300: #f1e9da;
+    --color-plan-ice-200: #dde5f0;
+    --color-plan-orange-400: #e8a45c;
+    --color-plan-orange-300: #f3c089;
+    --color-plan-bronze-600: #a8702c;
+}

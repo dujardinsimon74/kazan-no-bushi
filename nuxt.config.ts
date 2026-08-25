@@ -7,17 +7,17 @@ import { PrimeVueResolver } from "@primevue/auto-import-resolver";
 const MyPreset = definePreset(Aura, {
   semantic: {
     primary: {
-      50: "{indigo.50}",
-      100: "{indigo.100}",
-      200: "{indigo.200}",
-      300: "{indigo.300}",
-      400: "{indigo.400}",
-      500: "{indigo.500}",
-      600: "{indigo.600}",
-      700: "{indigo.700}",
-      800: "{indigo.800}",
-      900: "{indigo.900}",
-      950: "{indigo.950}",
+      50: "#fdf6ee",
+      100: "#faead4",
+      200: "#f6d6ab",
+      300: "#f3c089",
+      400: "#e8a45c",
+      500: "#d98a3a",
+      600: "#c07128",
+      700: "#a8702c",
+      800: "#7a4f20",
+      900: "#513416",
+      950: "#2c1c0c",
     },
   },
 });
@@ -54,7 +54,19 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "fr",
       },
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap",
+        },
+      ],
     },
   },
 });

@@ -33,62 +33,76 @@ onBeforeUnmount(() => {
 <template>
     <section
         id="hero"
-        class="relative flex flex-col items-center justify-center h-screen overflow-hidden"
+        class="relative flex flex-col items-center justify-center min-h-screen font-zen overflow-hidden text-center"
     >
         <!-- Background image -->
         <img
-            src="/kendo2.jpg"
+            src="/fond-mila.jpeg"
             alt="Combat de kendo"
             class="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        <!-- Dark overlay -->
-        <div class="absolute inset-0 bg-black/60" />
+        <!-- Navy veil -->
+        <div class="absolute inset-0 bg-plan-navy-900/[0.72]" />
+
+        <!-- Orange halo -->
+        <div
+            class="absolute inset-0"
+            style="
+                background-image: radial-gradient(
+                    120% 80% at 50% -10%,
+                    rgba(232, 164, 92, 0.34) 0%,
+                    rgba(232, 164, 92, 0.07) 44%,
+                    transparent 72%
+                );
+            "
+        />
 
         <!-- Content -->
-        <div class="relative z-10 flex flex-col items-center">
+        <div class="relative z-10 flex flex-col items-center px-5">
             <img
                 src="/logo-asm.png"
                 alt="Logo ASM"
                 class="w-24 h-24 sm:w-32 sm:h-32 mb-6 drop-shadow-xl rounded-full"
             />
             <h1
-                class="text-3xl sm:text-6xl font-bold mb-6 text-center w-full px-4 text-white drop-shadow-lg tracking-wide"
+                class="font-brush text-[clamp(44px,8vw,78px)] leading-none tracking-wide text-plan-cream-200 drop-shadow-[0_2px_0_rgba(20,31,69,0.6)]"
             >
-                Kazan No Bushi 2026
+                Kazan No Bushi
             </h1>
+            <div
+                class="mt-4 text-[clamp(16px,2.4vw,22px)] font-medium tracking-[0.14em] text-plan-ice-200"
+            >
+                les 28 et 29 novembre 2026
+            </div>
 
             <CountDown />
 
             <Transition name="fade" mode="out-in">
                 <p
                     :key="currentPhrase"
-                    class="mt-10 text-sm sm:text-base text-white/70 italic text-center px-6 max-w-md"
+                    class="mt-8 text-sm sm:text-base italic text-center px-6 max-w-md text-plan-ice-200/60"
                 >
                     {{ currentPhrase }}
                 </p>
             </Transition>
-        </div>
 
-        <!-- Scroll hint -->
-        <div
-            class="absolute bottom-10 flex flex-col items-center gap-2 text-white/60 animate-bounce z-10"
-        >
-            <span class="text-xs tracking-widest uppercase">Découvrir</span>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <a
+                href="#programme"
+                class="mt-8 inline-flex flex-col items-center gap-2 text-[11px] font-bold uppercase tracking-[0.26em] text-plan-orange-400/90 hover:text-plan-orange-300 transition-colors"
             >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
+                Découvrir
+                <span
+                    class="w-px h-[34px]"
+                    style="
+                        background: linear-gradient(
+                            180deg,
+                            rgba(232, 164, 92, 0.8),
+                            transparent
+                        );
+                    "
                 />
-            </svg>
+            </a>
         </div>
     </section>
 </template>
