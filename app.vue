@@ -40,11 +40,11 @@ useHead({
                         addressCountry: "FR",
                     },
                 },
-                image: ["https://kazan-no-bushi.vercel.app/fond-mila.jpeg"],
+                image: ["https://kazan-no-bushi.fr/fond-mila.jpeg"],
                 organizer: {
                     "@type": "Organization",
                     name: "ASM Kendo",
-                    url: "https://kazan-no-bushi.vercel.app",
+                    url: "https://kazan-no-bushi.fr",
                     email: "kendo@asm-omnisports.com",
                     sameAs: [
                         "https://www.instagram.com/asm_kendo/",

@@ -70,12 +70,12 @@ export default defineNuxtConfig({
           content:
             "Stage, passage de grade et compétition de kendo — les 28 et 29 novembre 2026 à l'Artenium, Ceyrat.",
         },
-        { property: "og:url", content: "https://kazan-no-bushi.vercel.app" },
+        { property: "og:url", content: "https://kazan-no-bushi.fr" },
         { property: "og:locale", content: "fr_FR" },
         { property: "og:site_name", content: "Kazan No Bushi" },
         {
           property: "og:image",
-          content: "https://kazan-no-bushi.vercel.app/fond-mila.jpeg",
+          content: "https://kazan-no-bushi.fr/fond-mila.jpeg",
         },
         { property: "og:image:width", content: "1960" },
         { property: "og:image:height", content: "1310" },
@@ -91,12 +91,12 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: "https://kazan-no-bushi.vercel.app/fond-mila.jpeg",
+          content: "https://kazan-no-bushi.fr/fond-mila.jpeg",
         },
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: "canonical", href: "https://kazan-no-bushi.vercel.app" },
+        { rel: "canonical", href: "https://kazan-no-bushi.fr" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
