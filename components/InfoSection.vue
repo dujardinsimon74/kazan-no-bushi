@@ -6,7 +6,9 @@
         <Categories />
         <Program />
         <Venue />
+        <Partners />
         <Registration />
+        <Contact />
 
         <!-- Footer -->
         <footer

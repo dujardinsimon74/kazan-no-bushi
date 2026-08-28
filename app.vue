@@ -16,6 +16,44 @@ import ScrollSmoother from "gsap/ScrollSmoother";
 
 useHead({
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [
+        {
+            type: "application/ld+json",
+            innerHTML: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "SportsEvent",
+                name: "Kazan No Bushi — XIVème édition",
+                description:
+                    "Stage, passage de grade et compétition de kendo.",
+                startDate: "2026-11-28T09:30:00+01:00",
+                eventAttendanceMode:
+                    "https://schema.org/OfflineEventAttendanceMode",
+                eventStatus: "https://schema.org/EventScheduled",
+                location: {
+                    "@type": "Place",
+                    name: "Artenium",
+                    address: {
+                        "@type": "PostalAddress",
+                        streetAddress: "4 Parc de l'Artière",
+                        addressLocality: "Ceyrat",
+                        postalCode: "63122",
+                        addressCountry: "FR",
+                    },
+                },
+                image: ["https://kazan-no-bushi.vercel.app/fond-mila.jpeg"],
+                organizer: {
+                    "@type": "Organization",
+                    name: "ASM Kendo",
+                    url: "https://kazan-no-bushi.vercel.app",
+                    email: "kendo@asm-omnisports.com",
+                    sameAs: [
+                        "https://www.instagram.com/asm_kendo/",
+                        "https://www.facebook.com/kazankendo",
+                    ],
+                },
+            }),
+        },
+    ],
 });
 
 let smoother: InstanceType<typeof ScrollSmoother> | null = null;

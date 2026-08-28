@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kazan-no-bushi.vercel.app/sitemap.xml
