@@ -12,11 +12,11 @@ const categories = [
     },
     {
         name: "Femmes",
-        details: ["Équipes de 3", "Tout niveaux"],
+        details: ["Équipes de 3", "Tous niveaux"],
     },
     {
         name: "Open",
-        details: ["Équipes de 3", "Tout niveaux et mixte"],
+        details: ["Équipes de 3", "Tous niveaux et mixte"],
     },
 ];
 </script>
