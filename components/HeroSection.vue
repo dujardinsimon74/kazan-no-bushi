@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
         <img
             src="/fond-mila.jpeg"
             alt="Combat de kendo"
-            class="absolute inset-0 w-full h-full object-cover object-top"
+            class="absolute inset-0"
         />
 
         <!-- Navy veil -->
