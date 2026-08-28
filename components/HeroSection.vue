@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
         <img
             src="/fond-mila.jpeg"
             alt="Combat de kendo"
-            class="absolute inset-0 w-full h-full object-cover object-center"
+            class="absolute inset-0 w-full h-full object-cover object-top"
         />
 
         <!-- Navy veil -->
@@ -66,12 +66,12 @@ onBeforeUnmount(() => {
                 class="w-24 h-24 sm:w-32 sm:h-32 mb-6 drop-shadow-xl rounded-full"
             />
             <h1
-                class="font-brush text-[clamp(44px,8vw,78px)] leading-none tracking-wide text-plan-cream-200 drop-shadow-[0_2px_0_rgba(20,31,69,0.6)]"
+                class="font-title text-[clamp(54px,10vw,120px)] leading-none tracking-wide text-plan-cream-200 drop-shadow-[0_2px_0_rgba(20,31,69,0.6)]"
             >
-                Kazan No Bushi
+                KAZAN NO BUSHI
             </h1>
             <div
-                class="mt-4 text-[clamp(16px,2.4vw,22px)] font-medium tracking-[0.14em] text-plan-ice-200"
+                class="mt-4 text-[clamp(20px,4vw,32px)] font-medium tracking-[0.14em] text-plan-ice-200"
             >
                 les 28 et 29 novembre 2026
             </div>
